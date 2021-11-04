@@ -8,6 +8,13 @@ public class AccountBalanceResponse {
 
     private Double balance;
 
+    public AccountBalanceResponse() {}
+
+    public AccountBalanceResponse(Long accountId, Double balance){
+        this.setAccountId(accountId);
+        this.setBalance(balance);
+    }
+
 
 
 }

@@ -26,6 +26,9 @@ public class AccountServiceImpl implements AccountService {
     @Value("${lab.account.exceptions.account-without-balance-message}")
     private String messageExceptionAccountWithoutBalance;
 
+    @Value("${lab.account.exceptions.account-without-balance-description}")
+    private String descriptionExceptionAccountWithoutBalance;
+
     @Override
     public Account findAccount(Long accountId) {
         Optional<Account> account = accountRepository.findById(accountId);
@@ -44,7 +47,7 @@ public class AccountServiceImpl implements AccountService {
         boolean debited = account.debit(valueOfDebit);
 
         if(!debited)
-            throw new AccountWithoutBalanceException(messageExceptionAccountWithoutBalance, descriptionExceptionAccountWithoutBalance)
+            throw new AccountWithoutBalanceException(messageExceptionAccountWithoutBalance, descriptionExceptionAccountWithoutBalance);
 
         accountRepository.save(account);
     }

@@ -8,5 +8,7 @@ public class DebitAccountResponse {
 
     public DebitAccountResponse() {}
 
-    public Debit
+    public DebitAccountResponse(boolean debited) {
+        this.setDebited(debited);
+    }
 }

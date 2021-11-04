@@ -1,6 +1,7 @@
 package br.com.lab.impacta.account.application.adapter;
 
 import br.com.lab.impacta.account.application.dto.response.AccountBalanceResponse;
+import br.com.lab.impacta.account.model.Account;
 
 public class AccountAdapter {
 
