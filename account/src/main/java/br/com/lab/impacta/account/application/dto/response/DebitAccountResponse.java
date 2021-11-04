@@ -8,5 +8,5 @@ public class DebitAccountResponse {
 
     public DebitAccountResponse() {}
 
-    publid Debit
+    public Debit
 }
